@@ -1,2 +1,2 @@
 # React-Node
-A React project with NodeJS and probably MongoDB
+A React project with NodeJS and MongoDB
