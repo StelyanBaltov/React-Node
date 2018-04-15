@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "9e96a74cc6927aaaf518"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "de3b5734f92dc0743a52"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -19431,7 +19431,7 @@ var App = function (_Component) {
             return _react2.default.createElement(
                 'h1',
                 null,
-                'Hello World'
+                'Test App Component'
             );
         }
     }]);
