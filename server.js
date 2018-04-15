@@ -1,8 +1,12 @@
 const express = require('express');
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('Hello')
+const path = require('path');
+
+const index = path.join(__dirname, 'index.html')
+
+app.get('*', (req, res) => {
+    res.sendfile(index);
 });
 
 app.listen(5001, () => {
