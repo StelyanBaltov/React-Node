@@ -8,16 +8,15 @@ const template = path.join(__dirname, 'template.html')
 
 
 const config = {
-    entry: {
-        app: [
-            'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true',
-            'babel-polyfill',
-            APP_DIR + '/index.js'
-        ]
-    },
+    entry: [
+        'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true',
+        'babel-polyfill',
+        APP_DIR + '/index.js'
+    ],
     output: {
         filename: 'bundle.js',
         path: BUILD_DIR,
+        publicPath: '/'
     },
     context: APP_DIR,
     resolve: {
@@ -25,7 +24,7 @@ const config = {
             'node_modules',
             APP_DIR
         ],
-        extensions: ['.js', 'jsx', '.css']
+        extensions: ['.js', '.css']
     },
     module: {
         rules: [
@@ -39,12 +38,13 @@ const config = {
             },
             {
             test: /\.(jsx|js)?$/,
-            use: [{
+            exclude: /node_modules/,
+            use: {
                 loader: "babel-loader",
                 options: {
                     cacheDirectory: true
                 }
-            }]
+            }
             }
         ],
 
